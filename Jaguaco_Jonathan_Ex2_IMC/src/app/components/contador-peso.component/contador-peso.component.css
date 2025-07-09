@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+
+.contenedorInfo {
+  flex: 1;
+  min-width: 280px;
+  background-color: #fefefe;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.seccion-peso label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-peso p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.botones {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.botones button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botones button:hover {
+  background-color: #0056b3;
+}
+
+.seccion-imc {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.seccion-imc strong {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.tablaInfo {
+  flex: 1;
+  min-width: 280px;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tablaInfo h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tablaInfo table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.tablaInfo th,
+.tablaInfo td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.bajo-peso {
+  color: #0d6efd;
+}
+
+.normal {
+  color: #198754;
+}
+
+.sobrepeso {
+  color: #ffc107;
+}
+
+.obesidad {
+  color: #dc3545;
+}
+
+

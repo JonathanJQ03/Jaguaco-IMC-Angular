@@ -1,0 +1,55 @@
+<h2>Calculadora de masa corporal:</h2>
+<div class="contenedor">
+  <div class="contenedorInfo">
+    <div class="seccion-peso">
+      <label>Tu peso actual es:</label>
+      <p>{{ W() }} kg</p>
+      <div class="botones">
+        <button (click)="sumar()">+1 kg</button>
+        <button (click)="restar()">-1 kg</button>
+        <button (click)="resetKG()">Reset 40 kg</button>
+      </div>
+    </div>
+
+    <div class="seccion-imc">
+      <strong>IMC actual:</strong> {{ IMC() }}<br />
+      <strong [ngClass]="estadoIMC().toLowerCase().replace(' ', '-')">
+        Estado Actual: {{ estadoIMC() }}
+      </strong>
+      <p class="consejo" [ngClass]="estadoIMC().toLowerCase().replace(' ', '-')">
+    {{ consejoIMC() }}
+  </p>
+    </div>
+  </div>
+
+  <div class="tablaInfo">
+    <h4>Tabla de clasificación del IMC</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Clasificación</th>
+          <th>IMC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr [ngClass]="estadoIMC() === 'Bajo peso' ? 'bajo-peso' : ''">
+          <td>Bajo peso</td>
+          <td>&lt; 18.5</td>
+        </tr>
+        <tr [ngClass]="estadoIMC() === 'Normal' ? 'normal' : ''">
+          <td>Normal</td>
+          <td>18.5 – 24.9</td>
+        </tr>
+        <tr [ngClass]="estadoIMC() === 'Sobrepeso' ? 'sobrepeso' : ''">
+          <td>Sobrepeso</td>
+          <td>25.0 – 29.9</td>
+        </tr>
+        <tr [ngClass]="estadoIMC() === 'Obesidad' ? 'obesidad' : ''">
+          <td>Obesidad</td>
+          <td>30 o más</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
